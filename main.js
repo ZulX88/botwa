@@ -175,9 +175,8 @@ async function startHaruka() {
 
 	if (!sock.authState.creds.registered) {
 		if (customPair){
-    		/*const phoneNumber = await question('\n\n\nKetik nomor kamu, contoh input nomor yang benar: 6281234567890\n');*/
-    		const phoneNumber = "601164899724";
-    		const code = await sock.ZulPairingCode(phoneNumber,pairCode)
+    		const phoneNumber = await question('\n\n\nKetik nomor kamu, contoh input nomor yang benar: 6281234567890\n');
+    		const code = await sock.ZulPairingCode(phoneNumber.trim(),pairCode)
     		console.log(chalk.white.bold(` Kode Pairing Bot Whatsapp kamu :`), chalk.red.bold(`${code}`))
     		}
     	else {
